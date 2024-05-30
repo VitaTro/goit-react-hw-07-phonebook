@@ -5,9 +5,9 @@ import ContactList from './ContactList/ContactList';
 
 import { fetchContacts } from '../redux/operations';
 import { getError, getIsLoading } from '../redux/state';
-
 import Filter from './Filter/Filter';
 import { Loader } from './Loader/Loader';
+import background from './img/apple.jpeg';
 
 export const App = () => {
   const dispatch = useDispatch();
@@ -26,8 +26,11 @@ export const App = () => {
           flexDirection: 'column',
           justifyContent: 'center',
           alignItems: 'center',
-          fontSize: 20,
-          color: '#010101',
+          fontSize: 28,
+          color: '#fff',
+          backgroundImage: `url(${background})`,
+          backgroundRepeat: 'no-repeat',
+          backgroundSize: 'cover',
         }}
       >
         <h1>Phonebook</h1>
