@@ -9,12 +9,22 @@ import Filter from './Filter/Filter';
 import { Loader } from './Loader/Loader';
 import background from './img/apple.jpeg';
 
+// const Key = 'Contacts';
+
 export const App = () => {
+  // const contacts = useSelector(getContacts);
+  // const isMounted = useRef(false);
   const dispatch = useDispatch();
   const isLoading = useSelector(getIsLoading);
   const error = useSelector(getError);
 
   useEffect(() => {
+    //   if (isMounted.current) {
+    //     localStorage.setItem(Key, JSON.stringify(contacts));
+    //   } else {
+    //     isMounted.current = true;
+    //   }
+    // }, [contacts]
     dispatch(fetchContacts());
   }, [dispatch]);
   return (

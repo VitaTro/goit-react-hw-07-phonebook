@@ -2,6 +2,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { addContact } from '../../redux/operations';
 import { getContacts } from '../../redux/state';
 import css from './ContactForm.module.css';
+
 const ContactForm = () => {
   const dispatch = useDispatch();
   const contacts = useSelector(getContacts);
